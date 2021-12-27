@@ -19,6 +19,11 @@ public class Post {
     @Temporal(TemporalType.DATE)
     private Date date;
 
+
+
+    @ManyToOne
+    private Category category;
+
     public Post() {
         super();
     }
@@ -75,6 +80,15 @@ public class Post {
 
     public Date getDate() {
         return date;
+    }
+
+
+    public void setCategory(Category category){
+        category = category;
+    }
+
+    public Category getCategory() {
+        return category;
     }
 
     public String getDateStr() {
